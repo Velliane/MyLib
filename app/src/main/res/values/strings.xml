@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyLib</string>
+
+    <!-- Drawer -->
+    <string name="main_drawer_open">Open navigation drawer</string>
+    <string name="main_drawer_close">Close navigation drawer</string>
+
+
+</resources>
