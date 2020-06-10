@@ -12,9 +12,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <activity android:name=".controller.activity.AddBookActivity"/>
-        <activity android:name=".controller.activity.DetailsActivity" />
-        <activity android:name=".controller.activity.MainActivity">
+        <activity android:name=".add_edit_book.AddBookActivity"/>
+        <activity android:name=".detailed_book.DetailsActivity" />
+        <activity android:name=".home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

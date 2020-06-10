@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".controller.activity.DetailsActivity">
+        tools:context=".detailed_book.DetailsActivity">
 
         <include
             android:id="@+id/edit_toolbar"

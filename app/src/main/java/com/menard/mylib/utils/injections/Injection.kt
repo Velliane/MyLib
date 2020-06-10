@@ -1,11 +1,11 @@
-package com.menard.mylib.injections
+package com.menard.mylib.utils.injections
 
 import android.content.Context
-import com.menard.mylib.database.BooksDatabase
-import com.menard.mylib.repositories.AuthorDataRepository
-import com.menard.mylib.repositories.BookDataRepository
-import com.menard.mylib.repositories.EditorDataRepository
-import com.menard.mylib.repositories.GraphicArtistRepository
+import com.menard.mylib.data.BooksDatabase
+import com.menard.mylib.data.repositories.AuthorDataRepository
+import com.menard.mylib.data.repositories.BookDataRepository
+import com.menard.mylib.data.repositories.EditorDataRepository
+import com.menard.mylib.data.repositories.GraphicArtistRepository
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 

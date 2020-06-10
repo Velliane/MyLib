@@ -4,12 +4,10 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.menard.mylib.database.BooksDatabase
-import com.menard.mylib.model.Author
+import com.menard.mylib.data.BooksDatabase
 import com.menard.mylib.model.Book
 import junit.framework.Assert.assertTrue
 import org.junit.After
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

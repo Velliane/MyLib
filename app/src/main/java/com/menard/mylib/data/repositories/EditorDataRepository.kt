@@ -1,7 +1,7 @@
-package com.menard.mylib.repositories
+package com.menard.mylib.data.repositories
 
 import androidx.lifecycle.LiveData
-import com.menard.mylib.database.dao.EditorDao
+import com.menard.mylib.data.dao.EditorDao
 import com.menard.mylib.model.Editor
 
 class EditorDataRepository (private val editorDao: EditorDao){

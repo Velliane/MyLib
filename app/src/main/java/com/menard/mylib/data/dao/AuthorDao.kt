@@ -1,4 +1,4 @@
-package com.menard.mylib.database.dao
+package com.menard.mylib.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

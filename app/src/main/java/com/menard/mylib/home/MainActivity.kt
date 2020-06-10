@@ -1,4 +1,4 @@
-package com.menard.mylib.controller.activity
+package com.menard.mylib.home
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -17,11 +17,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.menard.mylib.R
-import com.menard.mylib.controller.fragment.HomeFragment
-import com.menard.mylib.controller.fragment.ListsFragment
-import com.menard.mylib.injections.Injection
+import com.menard.mylib.add_edit_book.AddBookActivity
+import com.menard.mylib.utils.injections.Injection
 import com.menard.mylib.utils.*
-import com.menard.mylib.view_model.BookViewModel
+import com.menard.mylib.view_model.AddEditBookViewModel
 
 class MainActivity : AppCompatActivity(), View.OnClickListener,
     BottomNavigationView.OnNavigationItemSelectedListener,
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
     /** Drawer Layout */
     private lateinit var drawerLayout: DrawerLayout
     /** BookViewModel */
-    private lateinit var bookViewModel: BookViewModel
+    private lateinit var addEditBookViewModel: AddEditBookViewModel
 
 
 
@@ -189,7 +188,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
     private fun configureViewModel(){
         val viewModelFactory = Injection.provideViewModelFactory(this)
-        bookViewModel = ViewModelProviders.of(this, viewModelFactory).get(BookViewModel::class.java)
+        addEditBookViewModel = ViewModelProviders.of(this, viewModelFactory).get(AddEditBookViewModel::class.java)
     }
 
     override fun onBackPressed() {

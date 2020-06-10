@@ -1,4 +1,4 @@
-package com.menard.mylib.controller.activity
+package com.menard.mylib.detailed_book
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

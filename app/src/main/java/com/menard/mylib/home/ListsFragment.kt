@@ -1,4 +1,4 @@
-package com.menard.mylib.controller.fragment
+package com.menard.mylib.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,16 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.menard.mylib.R
 
-class HomeFragment : Fragment() {
+class ListsFragment : Fragment(){
 
     companion object{
-        fun newInstance(): HomeFragment{
-            return HomeFragment()
+        fun newInstance(): ListsFragment {
+            return ListsFragment()
         }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_lists, container, false)
 
         return view
     }

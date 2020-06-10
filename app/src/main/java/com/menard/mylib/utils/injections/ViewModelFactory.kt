@@ -1,12 +1,12 @@
-package com.menard.mylib.injections
+package com.menard.mylib.utils.injections
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.menard.mylib.repositories.AuthorDataRepository
-import com.menard.mylib.repositories.BookDataRepository
-import com.menard.mylib.repositories.EditorDataRepository
-import com.menard.mylib.repositories.GraphicArtistRepository
-import com.menard.mylib.view_model.BookViewModel
+import com.menard.mylib.data.repositories.AuthorDataRepository
+import com.menard.mylib.data.repositories.BookDataRepository
+import com.menard.mylib.data.repositories.EditorDataRepository
+import com.menard.mylib.data.repositories.GraphicArtistRepository
+import com.menard.mylib.view_model.AddEditBookViewModel
 import java.lang.IllegalArgumentException
 import java.util.concurrent.Executor
 
@@ -19,8 +19,8 @@ class ViewModelFactory(
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if(modelClass.isAssignableFrom(BookViewModel::class.java)){
-            return BookViewModel(bookDataRepository, authorDataRepository, editorDataRepository, graphicArtistRepository, executor) as T
+        if(modelClass.isAssignableFrom(AddEditBookViewModel::class.java)){
+            return AddEditBookViewModel(bookDataRepository, authorDataRepository, editorDataRepository, graphicArtistRepository, executor) as T
         }
         throw IllegalArgumentException("Unknown ViewModel")
     }

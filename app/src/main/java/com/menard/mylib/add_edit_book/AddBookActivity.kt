@@ -1,4 +1,4 @@
-package com.menard.mylib.controller.activity
+package com.menard.mylib.add_edit_book
 
 import android.os.Bundle
 import android.view.View

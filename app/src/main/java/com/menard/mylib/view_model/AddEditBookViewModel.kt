@@ -3,13 +3,13 @@ package com.menard.mylib.view_model
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.menard.mylib.model.Book
-import com.menard.mylib.repositories.AuthorDataRepository
-import com.menard.mylib.repositories.BookDataRepository
-import com.menard.mylib.repositories.EditorDataRepository
-import com.menard.mylib.repositories.GraphicArtistRepository
+import com.menard.mylib.data.repositories.AuthorDataRepository
+import com.menard.mylib.data.repositories.BookDataRepository
+import com.menard.mylib.data.repositories.EditorDataRepository
+import com.menard.mylib.data.repositories.GraphicArtistRepository
 import java.util.concurrent.Executor
 
-class BookViewModel(
+class AddEditBookViewModel(
     private val bookDataRepository: BookDataRepository,
     private val authorDataRepository: AuthorDataRepository,
     private val editorDataRepository: EditorDataRepository,
