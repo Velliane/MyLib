@@ -1,4 +1,6 @@
 package com.menard.mylib.view_model
 
-class HomeViewModel {
+import androidx.lifecycle.ViewModel
+
+class HomeViewModel(): ViewModel() {
 }

@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.menard.mylib.data.repositories.dao.AuthorDao
+import com.menard.mylib.data.dao.AuthorDao
 import com.menard.mylib.data.dao.BookDao
 import com.menard.mylib.data.dao.EditorDao
 import com.menard.mylib.data.dao.GraphicArtistDao

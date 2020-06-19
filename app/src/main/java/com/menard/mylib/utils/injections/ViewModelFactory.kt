@@ -7,6 +7,8 @@ import com.menard.mylib.data.repositories.BookDataRepository
 import com.menard.mylib.data.repositories.EditorDataRepository
 import com.menard.mylib.data.repositories.GraphicArtistRepository
 import com.menard.mylib.view_model.AddEditBookViewModel
+import com.menard.mylib.view_model.DetailedViewModel
+import com.menard.mylib.view_model.HomeViewModel
 import java.lang.IllegalArgumentException
 import java.util.concurrent.Executor
 
@@ -21,6 +23,12 @@ class ViewModelFactory(
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(AddEditBookViewModel::class.java)){
             return AddEditBookViewModel(bookDataRepository, authorDataRepository, editorDataRepository, graphicArtistRepository, executor) as T
+        }
+        if(modelClass.isAssignableFrom(HomeViewModel::class.java)){
+            return HomeViewModel() as T
+        }
+        if(modelClass.isAssignableFrom(DetailedViewModel::class.java)){
+            return DetailedViewModel() as T
         }
         throw IllegalArgumentException("Unknown ViewModel")
     }

@@ -1,7 +1,7 @@
 package com.menard.mylib.data.repositories
 
 import androidx.lifecycle.LiveData
-import com.menard.mylib.data.repositories.dao.AuthorDao
+import com.menard.mylib.data.dao.AuthorDao
 import com.menard.mylib.model.Author
 
 /**

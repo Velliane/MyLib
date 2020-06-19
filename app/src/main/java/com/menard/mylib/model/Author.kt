@@ -1,5 +1,6 @@
 package com.menard.mylib.model
 
+import androidx.room.Dao
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import org.threeten.bp.LocalDate

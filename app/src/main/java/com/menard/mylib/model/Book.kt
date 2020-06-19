@@ -1,26 +1,27 @@
 package com.menard.mylib.model
 
+import androidx.room.Dao
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(
-    foreignKeys = [ForeignKey(
-        entity = Author::class,
-        parentColumns = arrayOf("id_author"),
-        childColumns = arrayOf("author_id")
-    ), (ForeignKey(
-        entity = GraphicArtist::class,
-        parentColumns = arrayOf("id_graphic"),
-        childColumns = arrayOf("graphic_id")
-    )), (ForeignKey(
-        entity = Editor::class,
-        parentColumns = arrayOf("id_editor"),
-        childColumns = arrayOf("editor_id")
-    ))]
-)
+
+//    foreignKeys = [ForeignKey(
+//        entity = Author::class,
+//        parentColumns = arrayOf("id_author"),
+//        childColumns = arrayOf("author_id")
+//    ), (ForeignKey(
+//        entity = GraphicArtist::class,
+//        parentColumns = arrayOf("id_graphic"),
+//        childColumns = arrayOf("graphic_id")
+//    )), (ForeignKey(
+//        entity = Editor::class,
+//        parentColumns = arrayOf("id_editor"),
+//        childColumns = arrayOf("editor_id")
+//    ))]
 
 
+@Entity
 data class Book(
 
     @PrimaryKey(autoGenerate = true)

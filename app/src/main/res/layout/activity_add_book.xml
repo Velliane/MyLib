@@ -26,7 +26,7 @@
             app:layout_constraintTop_toBottomOf="@id/edit_toolbar" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_title"
+            android:id="@+id/edit_title_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -36,42 +36,45 @@
             app:layout_constraintStart_toEndOf="@id/edit_photo"
             app:layout_constraintTop_toBottomOf="@id/edit_toolbar">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Title"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_author"
+            android:id="@+id/edit_author_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            app:layout_constraintEnd_toStartOf="@+id/edit_graphic"
+            app:layout_constraintEnd_toStartOf="@+id/edit_graphic_container"
             app:layout_constraintStart_toEndOf="@id/edit_photo"
-            app:layout_constraintTop_toBottomOf="@+id/edit_title" >
+            app:layout_constraintTop_toBottomOf="@+id/edit_title_container" >
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_author"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Author"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_graphic"
+            android:id="@+id/edit_graphic_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edit_title"
-            app:layout_constraintStart_toEndOf="@id/edit_author"
-            app:layout_constraintBottom_toTopOf="@id/edit_isbn">
+            app:layout_constraintTop_toBottomOf="@id/edit_title_container"
+            app:layout_constraintStart_toEndOf="@id/edit_author_container"
+            app:layout_constraintBottom_toTopOf="@id/edit_isbn_container">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_graphic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Graphic Artist"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_isbn"
+            android:id="@+id/edit_isbn_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -79,15 +82,16 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/edit_photo"
-            app:layout_constraintTop_toBottomOf="@+id/edit_author">
+            app:layout_constraintTop_toBottomOf="@+id/edit_author_container">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_isbn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="ISBN"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_nbr_pages"
+            android:id="@+id/edit_nbr_pages_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -95,8 +99,9 @@
             app:layout_constraintBottom_toTopOf="@id/edit_category"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/edit_photo"
-            app:layout_constraintTop_toBottomOf="@id/edit_isbn">
+            app:layout_constraintTop_toBottomOf="@id/edit_isbn_container">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_nbr_pages"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="123 (nrb de pages)"/>
@@ -109,7 +114,7 @@
             android:layout_marginStart="5dp"
             app:layout_constraintBottom_toTopOf="@id/edit_title_synopsis"
             app:layout_constraintStart_toEndOf="@id/edit_photo"
-            app:layout_constraintTop_toBottomOf="@id/edit_nbr_pages"
+            app:layout_constraintTop_toBottomOf="@id/edit_nbr_pages_container"
             app:layout_constraintEnd_toStartOf="@id/edit_style" />
 
         <Spinner
@@ -119,7 +124,7 @@
             app:layout_constraintBottom_toTopOf="@id/edit_title_synopsis"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/edit_category"
-            app:layout_constraintTop_toBottomOf="@id/edit_nbr_pages" />
+            app:layout_constraintTop_toBottomOf="@id/edit_nbr_pages_container" />
 
         <TextView
             android:id="@+id/edit_title_synopsis"
@@ -157,6 +162,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edit_synopsis" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_book_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/save_btn"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
