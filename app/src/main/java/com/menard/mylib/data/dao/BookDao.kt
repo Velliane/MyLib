@@ -1,10 +1,7 @@
 package com.menard.mylib.data.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.menard.mylib.model.Book
 
 /**
@@ -20,7 +17,7 @@ interface BookDao {
     @Query("SELECT * FROM Book WHERE id_book = :id_book")
     fun getBookFromId(id_book: Int): LiveData<List<Book>>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertBook(book: Book): Long
 
     @Update

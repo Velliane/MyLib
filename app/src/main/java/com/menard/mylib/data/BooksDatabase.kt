@@ -38,7 +38,7 @@ abstract class BooksDatabase : RoomDatabase() {
                             context.applicationContext,
                             BooksDatabase::class.java,
                             "Books.db"
-                        )
+                        ).setJournalMode(JournalMode.TRUNCATE)
                             .build()
                     }
                 }
